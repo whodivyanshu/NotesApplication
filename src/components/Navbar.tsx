@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaRegMoon } from "react-icons/fa";
 
@@ -5,7 +6,9 @@ const Navbar = () => {
   return (
     <div className="bg-black flex  h-[10vh]">
       <div className="w-1/2 bg-black text-3xl font-extrabold text-white   flex items-center justify-center">
-        Node<span className="text-orange-500">Nest</span>
+        <Link href={"/"}>
+          Node<span className="text-orange-500">Nest</span>
+        </Link>
       </div>
       <div className="w-1/2 text-white flex gap-5 items-center justify-center">
         <button className="border rounded-md p-2  ">

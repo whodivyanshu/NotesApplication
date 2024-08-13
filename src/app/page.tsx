@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CiLinkedin } from "react-icons/ci";
 import { FaRegEdit } from "react-icons/fa";
 import { VscGithub } from "react-icons/vsc";
@@ -13,7 +14,12 @@ export default function Home() {
         Streamline Your Workflow with Effortless Note Creation - Elevate
         Productivity, Stay Organized, and Focus on What Matters Most.
       </p>
-      <button className="w-40">Get Started</button>
+      <Link
+        href={"/dashboard"}
+        className="w-40 bg-yellow-300 p-3 rounded-3xl text-black text-center"
+      >
+        Get Started
+      </Link>
       <div className="flex">
         <VscGithub />
         <CiLinkedin />
