@@ -9,7 +9,7 @@ export default function Home() {
       <div className="flex  rounded-3xl font-bold justify-center items-center gap-2 py-1 px-3 bg-gray-800 text-orange-500  ">
         Sort Your Notes Easily <FaRegEdit />
       </div>
-      <h1>Create Notes With Ease!</h1>
+      <h1>Create Notes With Easily!</h1>
       <p>
         Streamline Your Workflow with Effortless Note Creation - Elevate
         Productivity, Stay Organized, and Focus on What Matters Most.
