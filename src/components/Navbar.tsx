@@ -4,8 +4,8 @@ import { FaRegMoon } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <div className="bg-black flex  h-[10vh]">
-      <div className="w-1/2 bg-black text-3xl font-extrabold text-white   flex items-center justify-center">
+    <div className="bg-black flex   h-[10vh]">
+      <div className="w-1/2 bg-black pr-[300px] text-3xl font-extrabold text-white   flex items-center justify-center">
         <Link href={"/"}>
           Node<span className="text-orange-500">Nest</span>
         </Link>

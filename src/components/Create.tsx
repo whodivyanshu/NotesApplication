@@ -8,6 +8,7 @@ const Create = () => {
         New Note
         <span className="text-sm">Right here now you can create new note</span>
       </div>
+      <Icon />
     </div>
   );
 };

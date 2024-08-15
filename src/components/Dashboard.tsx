@@ -2,9 +2,12 @@
 import React, { useState } from "react";
 import Settings from "./Settings";
 import Notes from "./Notes";
+import Create from "./Create";
 
 const Dashboard = () => {
   const [component, setComponent] = useState(true);
+  const [create, setCreate] = useState(false);
+  console.log(create, "create");
   return (
     <div className="h-[90vh] bg-black w-full pt-20">
       <div className="w-[60%] bg-black h-[80%] mx-auto flex ">
@@ -23,7 +26,15 @@ const Dashboard = () => {
           </button>
         </div>
         <div className="w-4/5">
-          {component === true ? <Notes /> : <Settings />}
+          {component === true ? (
+            create ? (
+              <Create />
+            ) : (
+              <Notes setCreateFunction={setCreate} />
+            )
+          ) : (
+            <Settings />
+          )}
         </div>
       </div>
     </div>
