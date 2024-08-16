@@ -10,7 +10,7 @@ const Navbar = () => {
           Node<span className="text-orange-500">Nest</span>
         </Link>
       </div>
-      <div className="w-1/2 text-white flex gap-5 items-center justify-center">
+      <div className="w-1/2 pl-[300px] text-white flex gap-5 items-center justify-center">
         <button className="border rounded-md p-2  ">
           <FaRegMoon color="white" size={20} />
         </button>

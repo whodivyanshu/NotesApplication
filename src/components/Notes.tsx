@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import Create from "./Create";
 
-const Notes = ({ setCreateFunction }) => {
+export interface props {
+  setComponentFunction: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Notes: FC<props> = ({ setComponentFunction }) => {
   return (
     <div>
       <div className="flex">
@@ -16,7 +20,7 @@ const Notes = ({ setCreateFunction }) => {
 
         <div className="w-1/2 ">
           <button
-            onClick={() => setCreateFunction(true)}
+            onClick={() => setComponentFunction(true)}
             className="text-white bg-orange-500 border-black py-2 px-4 rounded"
           >
             create new note!
