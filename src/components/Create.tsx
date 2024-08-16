@@ -4,7 +4,7 @@ import { props } from "./Notes";
 
 const Create: FC<props> = ({ setComponentFunction }) => {
   return (
-    <div className="flex">
+    <div className="flex bg-slate-800 h-[90%] w-[80%] m-auto justify-between p-5">
       <div className="text-white text-3xl">
         {" "}
         New Note <br />
@@ -15,7 +15,7 @@ const Create: FC<props> = ({ setComponentFunction }) => {
           onClick={() => setComponentFunction(false)}
           className="pl-[200px]"
         >
-          <IoCloseSharp color="white" />
+          <IoCloseSharp size={30} color="white" />
         </button>
       </div>
     </div>
