@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Settings from "./Settings";
 import Notes from "./Notes";
 import Create from "./Create";
+import { FiHome } from "react-icons/fi";
+import { IoSettingsOutline } from "react-icons/io5";
 
 const Dashboard = () => {
   const [component, setComponent] = useState(true);
@@ -10,27 +12,29 @@ const Dashboard = () => {
   console.log(create, "create");
   return (
     <div className="h-[90vh] bg-black w-full pt-20">
-      <div className="w-[60%] bg-black h-[80%] mx-auto flex ">
-        <div className="flex flex-col w-1/5 bg-black h-full py-10 gap-5">
+      <div className="w-[60%] bg-black h-[80%] mx-auto flex gap-10 ">
+        <div className="flex flex-col w-1/5 bg-black h-full py-1 gap-5">
           <button
             onClick={() => setComponent(true)}
-            className="border p-2 bg-slate-700 text-white"
+            className="hover:bg-slate-600 p-2 rounded-xl bg-black text-white flex justify-center items-center gap-2"
           >
+            <FiHome />
             Home
           </button>
           <button
             onClick={() => setComponent(false)}
-            className="border p-2 bg-slate-700 text-white"
+            className="hover:bg-slate-600 p-2 rounded-xl bg-black text-white flex justify-center items-center gap-2"
           >
+            <IoSettingsOutline />
             Settings
           </button>
         </div>
-        <div className="w-4/5">
+        <div className="w-4/5 pt-3">
           {component === true ? (
             create ? (
-              <Create />
+              <Create setComponentFunction={setCreate} />
             ) : (
-              <Notes setCreateFunction={setCreate} />
+              <Notes setComponentFunction={setCreate} />
             )
           ) : (
             <Settings />

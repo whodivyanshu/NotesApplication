@@ -1,14 +1,23 @@
-import React from "react";
+import React, { FC } from "react";
+import { IoCloseSharp } from "react-icons/io5";
+import { props } from "./Notes";
 
-const Create = () => {
+const Create: FC<props> = ({ setComponentFunction }) => {
   return (
-    <div className="bg-green-400">
+    <div className="flex">
       <div className="text-white text-3xl">
         {" "}
-        New Note
+        New Note <br />
         <span className="text-sm">Right here now you can create new note</span>
       </div>
-      <Icon />
+      <div>
+        <button
+          onClick={() => setComponentFunction(false)}
+          className="pl-[200px]"
+        >
+          <IoCloseSharp color="white" />
+        </button>
+      </div>
     </div>
   );
 };
